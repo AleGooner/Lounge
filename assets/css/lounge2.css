@@ -1,0 +1,281 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ *, *:after, *:before { border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+
+ article, aside, details, figcaption, figure, footer, header, hgroup,
+nav, section {
+    display: block
+}
+
+body, html {
+    font-size: 85%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Reset */
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* Toggle Styles */
+
+#wrapper {
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left:  -250px;
+    overflow-y: hidden;
+    background-image: url("../images/pattern.jpg");
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navbar-fixed-bottom  {
+    position: absolute;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    margin: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right:  -250px;
+}
+
+/* Sidebar Styling */
+.sidebar-nav {
+    position: absolute;
+    background-color: #222;
+    top: 60px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    padding: 5px 0 5px 0;
+    font: Arial, Verdana, sans-serif;
+    font-family: 'Cabin Sketch', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size:  1.1em;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6em;
+    background: rgba(255, 118, 0, 0.6);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+    color: #FF9900;
+    border: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+    background: rgba(255, 118, 0, 0.6);
+}
+
+.btn {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-primary {
+    background-color: #ff8533;
+    border-color: #ff8533;
+    color: #fff;
+}
+
+#menu-toggle {
+    position: fixed;
+    z-index: 1000;
+    color: #fff;
+    background-color: rgba(0, 0, 22, 0.3);
+    border: none;
+    border-radius: 0px;
+    font-family: 'Cabin Sketch' cursive;
+    font-size: 1em;
+    width: 80px;
+    height: 40px;
+    padding: 10px 1px 1px 1px;
+}
+
+#menu-toggle:hover {
+    color: #fff;
+    width: 80px;
+    height: 40px;
+    border-radius: 0px;
+    background: #222;
+    border-color: #222;
+}
+
+.logo {
+    position: relative;
+    top: 300px;
+    text-align: center;
+    margin: 35px;
+    -moz-box-shadow: 0px 0px 10px 3px #000;
+    -webkit-box-shadow: 0px 0px 10px 3px #000;
+    box-shadow: 0px 0px 10px 3px #000;
+}
+
+.navbar-text > a {
+    color: #ff8533;
+    text-indent: 20px;
+    font-size: .8em;
+}
+
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.media {
+    margin-top: 0;
+    max-width: 100%;
+}
+
+
+/*  Suggested Media Queries: change number of items per row */
+
+@media screen and (max-width: 1190px) {
+    .grid figure {
+        width: 20%; /* Fallback */
+        width: -webkit-calc(100% / 4);
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .grid figure {
+        width: 25%; /* Fallback */
+        width: -webkit-calc(100% / 4);
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .grid figure {
+        width: 33.3333333%; /* Fallback */
+        width: -webkit-calc(100% / 3);
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .grid figure {
+        width: 33.3333333%; /* Fallback */
+        width: -webkit-calc(100% / 2);
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid figure {
+        width: 50%; /* Fallback */
+        width: -webkit-calc(100% / 2);
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .grid figure {
+        width: 100%;
+    }
+}
+
+
+
